@@ -1,0 +1,141 @@
+@charset "utf-8";
+*{box-sizing: border-box; font-family: 'Oswald', sans-serif;}
+a{display: block;}
+h2{font-weight: bold; text-transform: uppercase; font-size: 30px; text-align: center;}
+/* IDs: */
+#wrap>div{width: 100%; height: 100vh; }
+#slide3{display: flex;}
+/* COMMON: */
+/* color:#8ba969/color:#a2c67a/color:#b9e18c/YYellowcolor:#e9dca6/yellowcolor:#e7e3d9/blackcolor:#525252 */
+.container{width: 100%; margin: 0 auto; height: 100vh; display: flex;}
+.hidden{display: block; text-indent: -9999px; font-size: 0;}
+/* HEADER: */
+header{position: fixed; top: 0; bottom: 0; left: 0; background: rgba(0, 0, 0, .4); width: 80px; height: 100%;  z-index: 1; display: flex; flex-direction: column; justify-content: space-between;}
+header .knob{margin: 100px 20px;}
+header .knob a{text-align: center; display: block;}
+header .knob a i{font-size: 25px; color: snow;}
+header ul{display: flex; flex-direction: column; text-align: center; align-items: center;}
+header ul li{ margin-bottom: 10px;}
+header ul li a{width: 30px; height: 30px;}
+header ul li a img{}
+header ul li a i{font-size: 30px; box-sizing: border-box;}
+header ul li a .fa-line{color: limegreen;}
+header ul li a .fa-envelope{color: snow;}
+/* FIXED-PATH: */
+.fixed-path{display: block; position: fixed; top: 70%; right: 0; z-index: 9; width: 40px; height: 100%; margin: 5px;}
+.fixed-path ul{display: flex; flex-direction: column;}
+.fixed-path ul::after{content: ''; background-color: saddlebrown; width: 5px; height: auto; position: absolute;  top: 50%; z-index: -1;}
+.fixed-path ul li{width: 20px; height: 20px; border-radius: 100%; border: none; background: rgba(255,255,255,.4); box-shadow: inset -1px -2px 0 0 lightblue; margin-bottom: 1rem; cursor: pointer;}
+.fixed-path ul li:hover{background-color: gold;}
+.fixed-path ul li.entrance{}
+.fixed-path ul li.entrance::after{content: '';}
+.fixed-path ul li.project-room{}
+.fixed-path ul li.livingroom{}
+.fixed-path ul li.study-room{}
+.fixed-path ul li.telephone-corridor{}
+.fixed-path ul li a{display: block;}
+/* SLIDE1: */
+#slide1{background: url('https://www.reviewgeek.com/p/uploads/2020/05/96ec61be.png') no-repeat center center/cover;}
+.ribbon{border-top: 3px outset snow; border-bottom: snow 3px outset; position: absolute; top: 40%; left: 0%; right: 0%; background: rgba(0,0,0,.1);  width: 50%; padding: 2rem; margin: 0 auto; z-index: 1;}
+.ribbon h1{font-size: 2.5rem; text-align: center;}
+.ribbon h3{font-size: 1rem; text-align: center;}
+#slide1 .container{}
+#slide1 .container .panel{position: relative; padding: 20px; box-shadow: 5px 5px 20px rgba(0, 0, 0, .6);  width: 80%; height: 80%; margin: 5% auto; }
+/* PROFILE: */
+.profile{width: 500px; height: 500px; position: absolute; top: 0; margin: 5rem auto; box-shadow: 10px 6px 10px black; display: none;}
+.tile{width: 100px; height: 100px; opacity: .8;}
+.tile:hover{}
+.tile1{background: rgba(255, 255, 255, .8); float: left; box-shadow: 5ps 5px 5px black inset;}
+.tile2{background-color: lightyellow; float: left;}
+.tile3{background-color: lightpink; float: left;}
+.tile4{background-color: lightgreen; float: left; }
+.tile5{background: rgba(255, 255, 255, .7); float: left;}
+.tile6{background-color: lightblue; float: left;}
+.tile7{background-color: sandybrown; float: left;}
+.tile8{background-color: yellowgreen; float: left;}
+.tile9{background-color: white; float: left;}
+.tile10{background-color: turquoise; float: left; }
+.tile11{background-color: lightsalmon; float: left;}
+.tile12{background-color: linen; float: left;}
+.tile13{background-color: whitesmoke; float: left;}
+.tile14{background-color: salmon; float: left;}
+.tile15{background-color: firebrick; float: left;}
+.tile16{background-color: snow; float: left;}
+.tile17{background-color: snow; float: left;}
+.tile18{background-color: tomato; float: left; }
+.tile19{background-color: burlywood; float: left;}
+.tile20{background-color: hotpink; float: left;}
+.tile21{background-color: wheat; float: left;}
+.tile22{background-color: honeydew; float: left;}
+.tile23{background-color: snow; float: left;}
+.tile24{background-color: forestgreen; float: left;}
+.tile25{background-color: crimson; float: left;}
+.scroll-down{border-radius: 6px; background: rgba(255, 255, 255, .8); width: 100px; height: 25px; text-align: center; position: absolute; bottom: 10%; left: 50%; line-height: 25px; transition: .4; }
+.scroll-down::before{content: ''; background: rgba(34, 34, 34, 0.4); width: 4px; height: 89px; position: absolute; top: 40px; left: 50%;}
+.scroll-down::after{content: ''; background-color: black; width: 4px; height: 24px; position: absolute; top: 25px; left: 50%;}
+/* SLIDE2: */
+#slide2{background-color:paleturquoise;}
+#slide2 .panel{width: 20%; height: 100%;
+  position: relative;
+  top: -28px; left: 0rem;  padding: 1rem;}
+#slide2 .panel h2{margin-bottom: 1rem;}
+.portrait{background: url(../img/selfie20191013_152919.jpg) no-repeat 50% 50%/cover;
+  height: 50%;
+  width: 100%;
+  border-radius: 50%; border: 4px inset rgba(255, 255, 255, .4); }
+.portrait:hover{background: url('../img/broken_mirror.jpg')no-repeat 25% 100%/cover;}
+#slide2 p{}
+/* SLIDE3: */
+#slide3{display: flex; flex-direction: column;}
+#slide3 .panel{width: 80%; height: 3rem; padding: 5px; margin: 2rem auto;box-shadow: 2px 2px 2px gainsboro; line-height: 40px;}
+#slide3 .skills{margin: 0 auto;}
+.skill{display: flex; justify-content: space-between; margin: 2rem auto;}
+.skill-name{}
+.progress{position: relative; width: 20rem; height: 30px; border: 1px solid gainsboro; border-radius: 6px;}
+.progress .bar{position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
+.html .progress .bar{background: linear-gradient(gold,lightyellow,lightcyan);}
+.css .progress .bar{background: linear-gradient(gold,lightyellow,lightcyan);}
+.scss .progress .bar{background: linear-gradient(gold,lightyellow,lightcyan);}
+.js .progress .bar{background: linear-gradient(gold,lightyellow,lightcyan);}
+.jquery .progress .bar{background: linear-gradient(gold,lightyellow,lightcyan);}
+.vuejs .progress .bar{background: linear-gradient(gold,lightyellow,lightcyan);}
+.react .progress .bar{background: linear-gradient(gold,lightyellow,lightcyan);}
+.progress .stats80{position: absolute; top: 0; right: 15px; bottom: 0; font-size: 1.1rem; line-height: 30px; color: black;}
+
+/* SLIDE4: */
+#slide4{display: flex; flex-direction: column;}
+#slide4 .panel{width: 100%; margin-bottom: 4rem;}
+#slide4 ul{display: flex; justify-content: center; width: 700px; flex-wrap: wrap; margin: 0 auto;}
+#slide4 ul li{width: 200px; height: 200px;  }
+#slide4 ul li:nth-child(2n-1){background-color: #bea48b;  width: 200px; height: 200px;}
+#slide4 ul li:nth-child(2n-1) a{display: block; color: #e7ded7;}
+#slide4 ul li:nth-child(2n){background-color: #e7ded7;  border: 10px solid snow;}
+#slide4 ul li:nth-child(2n) a{color: #bea48b; display: block;}
+#slide4 ul li:nth-child(4n){background-color: #e5e6ea;}
+/* CONTACT: */
+
+/* SLIDE5: */
+#slide5{}
+.bestregards{display: flex; justify-content: space-around;}
+.greeting{border-right: 1px solid grey; padding: 5rem;}
+.greeting h4{}
+.greeting p{}
+.sns{padding: 3rem;}
+.sns ul{display: flex;}
+.sns ul li{margin: 15px; text-transform: uppercase; transition: .4;}
+.sns ul li:hover .fa-line{color: limegreen;}
+.sns ul li a{display: flex; flex-direction: column; width: 50px; height: 50px;     text-align: center;}
+.sns ul li a i{font-size: 50px}
+#slide5 button{width: 120px; height: 44px; padding: 5px 12px; margin: 20px auto; background-color: #fff; color: #333; font-size: 15px; border: 1px solid black; border-radius: 6px; box-sizing: border-box; transition: .3s; cursor: pointer; display: block;}
+#slide5 button:hover{background-color: black; color: white;}
+/* FOOTER: */
+footer{}
+footer address{text-align: center;}
+/* TOTHETOP: */
+.to-the-top{background: white; position: fixed; bottom: 5%; right: 5%; width: 50px; height: 50px; border: 1px solid grey; text-align: center;}
+.to-the-top a{display: block; width: 100%; height: 100%; text-align: center;}
+.to-the-top a i{font-size: 15px; position: absolute; top: 30%; left: 0; right: 0; bottom: 0;}
+/* KEYFRAMES: */
+@keyframes jumping {
+  
+}

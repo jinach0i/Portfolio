@@ -1,0 +1,44 @@
+@charset "utf-8";
+*{box-sizing: border-box}
+html,body{position: relative; height: 100%;}
+img{width: 100%; height: 100%; display: block;}
+// color palette:
+// mixin:
+.swiper{width: 100%; height: 100%;
+  .swiper-slide{display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; -webkit-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center;}
+}
+.slide1{
+  .glance{display: flex;
+    .tile{width: 100px; height: 100px; padding: 10px; overflow: hidden;}
+  }
+}
+.slide2{
+  #skills{
+    >div{position: relative;
+      width: 60%;
+      height: 30px;
+      margin: 3em auto;
+      border: 1px solid rgb(87, 145, 92);}
+      .num{position: absolute;
+        top: 0;
+        bottom:0;
+        right: 15px;
+        font-size: 1.1em;
+        line-height:30px;
+        color: #006666;}
+  }
+}
+.slide5{
+  .sns{
+    ul{display: flex;
+      a{display: flex; flex-direction: column; text-align: center; margin-right: 20px; font-weight: bold;
+          i{text-align: center; font-size: 60px;}
+          .fa-git-square:hover{color: grey;}
+          .fa-book:hover{color: burlywood}
+          .fa-line:hover{color: limegreen;}
+          .fa-envelope:hover{color: tomato;}
+        
+      }
+    }
+  }
+}
