@@ -1,6 +1,6 @@
 @charset "utf-8";
 *{box-sizing: border-box; font-family: 'Oswald', sans-serif;}
-a{display: block;}
+a{display: block; text-align: center;}
 h2{font-weight: bold; text-transform: uppercase; font-size: 30px; text-align: center;}
 /* IDs: */
 #wrap>div{width: 100%; height: 100vh; }
@@ -9,14 +9,19 @@ h2{font-weight: bold; text-transform: uppercase; font-size: 30px; text-align: ce
 /* color:#8ba969/color:#a2c67a/color:#b9e18c/YYellowcolor:#e9dca6/yellowcolor:#e7e3d9/blackcolor:#525252 */
 .container{width: 100%; margin: 0 auto; height: 100vh; display: flex;}
 .hidden{display: block; text-indent: -9999px; font-size: 0;}
+/* SKIP: */
+#skip{position: absolute; background-color: black; padding: 0; font-size: 0; z-index: 9999;}
+#skip ul li a{ font-size: 0; text-align: center; color: white;}
+#skip ul li a:focus{font-size: 16px; padding: 14px;}
 /* HEADER: */
-header{position: fixed; top: 0; bottom: 0; left: 0; background: rgba(0, 0, 0, .4); width: 80px; height: 100%;  z-index: 1; display: flex; flex-direction: column; justify-content: space-between;}
-header .knob{margin: 100px 20px;}
-header .knob a{text-align: center; display: block;}
-header .knob a i{font-size: 25px; color: snow;}
-header ul{display: flex; flex-direction: column; text-align: center; align-items: center;}
-header ul li{ margin-bottom: 10px;}
-header ul li a{width: 30px; height: 30px;}
+.knob{margin: 100px 20px; }
+.knob i{font-size: 25px; color: snow;}
+.knob:hover header{width: 20%; background-color: #444; box-shadow: 0 4px 4px #222; }
+.knob:hover header ul li a{display: none;}
+header{position: fixed; top: 0; bottom: 0; left: 0; background: rgba(0, 0, 0, .4); width: 80px; height: 100%;  z-index: 1; display: flex; flex-direction: column; justify-content: space-between; transition: .5s;}
+header ul{display: flex; flex-direction: column; }
+header ul li{margin: 5px auto; width: 30px; height: 30px; }
+header ul li a{}
 header ul li a img{}
 header ul li a i{font-size: 30px; box-sizing: border-box;}
 header ul li a .fa-line{color: limegreen;}
@@ -74,33 +79,33 @@ header ul li a .fa-envelope{color: snow;}
 .scroll-down::before{content: ''; background: rgba(34, 34, 34, 0.4); width: 4px; height: 89px; position: absolute; top: 40px; left: 50%;}
 .scroll-down::after{content: ''; background-color: black; width: 4px; height: 24px; position: absolute; top: 25px; left: 50%;}
 /* SLIDE2: */
-#slide2{background-color:paleturquoise;}
-#slide2 .panel{width: 20%; height: 100%;
-  position: relative;
-  top: -28px; left: 0rem;  padding: 1rem;}
-#slide2 .panel h2{margin-bottom: 1rem;}
-.portrait{background: url(../img/selfie20191013_152919.jpg) no-repeat 50% 50%/cover;
-  height: 50%;
-  width: 100%;
-  border-radius: 50%; border: 4px inset rgba(255, 255, 255, .4); }
-.portrait:hover{background: url('../img/broken_mirror.jpg')no-repeat 25% 100%/cover;}
-#slide2 p{}
+#slide2{}
+#slide2 .title-box{width: 80%; height: 3rem; padding: 5px; margin: 2rem auto;box-shadow: 2px 2px 2px gainsboro; line-height: 40px;}
+#slide2 .title-box h2{}
+#slide2 .contents{margin: 0 auto;}
+#slide2 .contents .portrait{}
+#slide2 .contents .whatbenefitswhenworkwithme{}
+#slide2 .contents .whatbenefitswhenworkwithme ul{display: flex; justify-content: space-around;}
+#slide2 .contents .whatbenefitswhenworkwithme ul li:first-child{background-color: lightcoral; border-radius: 100%;}
+#slide2 .contents .whatbenefitswhenworkwithme ul li:nth-child(2){background-color: lightcyan; border-radius: 100%;}
+#slide2 .contents .whatbenefitswhenworkwithme ul li:last-child{background-color: lightgoldenrodyellow; border-radius: 100%;}
+#slide2 .contents .whatbenefitswhenworkwithme ul li a{}
 /* SLIDE3: */
 #slide3{display: flex; flex-direction: column;}
 #slide3 .panel{width: 80%; height: 3rem; padding: 5px; margin: 2rem auto;box-shadow: 2px 2px 2px gainsboro; line-height: 40px;}
 #slide3 .skills{margin: 0 auto;}
 .skill{display: flex; justify-content: space-between; margin: 2rem auto;}
 .skill-name{}
-.progress{position: relative; width: 20rem; height: 30px; border: 1px solid gainsboro; border-radius: 6px;}
+.progress{position: relative; width: 20rem; height: 30px; border: 1px solid gainsboro; border-radius: 6px; box-sizing: border-box;}
 .progress .bar{position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
-.html .progress .bar{background: linear-gradient(gold,lightyellow,lightcyan);}
-.css .progress .bar{background: linear-gradient(gold,lightyellow,lightcyan);}
-.scss .progress .bar{background: linear-gradient(gold,lightyellow,lightcyan);}
-.js .progress .bar{background: linear-gradient(gold,lightyellow,lightcyan);}
-.jquery .progress .bar{background: linear-gradient(gold,lightyellow,lightcyan);}
-.vuejs .progress .bar{background: linear-gradient(gold,lightyellow,lightcyan);}
-.react .progress .bar{background: linear-gradient(gold,lightyellow,lightcyan);}
-.progress .stats80{position: absolute; top: 0; right: 15px; bottom: 0; font-size: 1.1rem; line-height: 30px; color: black;}
+.html .progress .bar{background: linear-gradient(gold,lightyellow,lightcyan); width:0}
+.css .progress .bar{background: linear-gradient(gold,lightyellow,lightcyan); width:0}
+.scss .progress .bar{background: linear-gradient(gold,lightyellow,lightcyan);  width:0}
+.js .progress .bar{background: linear-gradient(gold,lightyellow,lightcyan);  width:0}
+.jquery .progress .bar{background: linear-gradient(gold,lightyellow,lightcyan);  width:0;}
+.vuejs .progress .bar{background: linear-gradient(gold,lightyellow,lightcyan);  width:0}
+.react .progress .bar{background: linear-gradient(gold,lightyellow,lightcyan);  width:0}
+.progress .stats{position: absolute; top: 0; right: 15px; bottom: 0; font-size: 1.1rem; line-height: 30px; color: black;}
 
 /* SLIDE4: */
 #slide4{display: flex; flex-direction: column;}

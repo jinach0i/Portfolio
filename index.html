@@ -25,30 +25,28 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js" defer></script>
 </head>
 <body >
     <div id="skip">
         <ul>
-            <li><a href="#header">헤더로 바로가기</a></li>
             <li><a href="#slide1">현관으로 바로가기</a></li>
             <li><a href="#slide2">About Me로 바로가기</a></li>
             <li><a href="#slide3">Skills로 바로가기</a></li>
             <li><a href="#slide4">로 바로가기</a></li>
-            <li><a href="#slide5">푸터로 바로가기</a></li>
+            <li><a href="#slide5">최하단으로 바로가기</a></li>
         </ul>
     </div>
     <div id="wrap">
         <div id="slide1">
             <header id="header">
                 <h1 class="hidden"><a href="index.html" title="home"><img src="" alt="logo">logo</a></h1>
-                <div class="knob">
-                    <a href="#"><i class="fas fa-angle-double-right"></i></a>
-                </div>
+                <a href="#" class="knob"><i class="fas fa-angle-double-right"></i></a>
                 <ul>
                     <li><a href="#"><img src="./img/kakaotalkicon.png" alt="kakao talk"></a></li>
                     <li><a href="#" title="line"><i class="fab fa-line"></i></a></li>
-                    <li><a href="#" title="email"><i class="far fa-envelope"></i></i></a></li>
+                    <li><a href="#" title="email"><i class="far fa-envelope"></i></a></li>
                 </ul>
             </header>
             <div class="ribbon">
@@ -90,27 +88,33 @@
             <aside class="where-are-we-now">
                 <div class="fixed-path">
                     <ul>
-                        <li class="entrance" title="Entrance"><a href="#"></a></li>
-                        <li class="project-room" title="Project-room"><a href="#"></a></li>
-                        <li class="livingroom"><a href="#" title="Livingroom"></a></li>
-                        <li class="study-room" title="Study room"><a href="#"></a></li>
-                        <li class="telephone-corridor" title="Telephone-corridor"><a href="#" title=""></a></li>
+                        <li class="entrance"><a href="#slide1" title="Entrance"></a></li>
+                        <li class="project-room"><a href="#slide2" title="Project-room"></a></li>
+                        <li class="livingroom"><a href="#slide3" title="Livingroom"></a></li>
+                        <li class="study-room"><a href="#slide4"  title="Study room"></a></li>
+                        <li class="telephone-corridor"><a href="#slide5" title="Telephone-corridor"></a></li>
                     </ul>
                 </div>
             </aside>
             <div class="scroll-down">Scroll Down</div>
         </div>
         <div id="slide2">
-            <div class="panel">
-                <h2 data-aos="fade-up" data-aos-duration="3000">about me</h2>
+            <div class="title-box">
+                <h2>about me</h2>
+            </div>
+            <div class="contents">
                 <div class="portrait">
                 </div>
                 <div class="whatbenefitswhenworkwithme">
-
+                    <ul>
+                        <li><a href="#" title="마크1"></a></li>
+                        <li><a href="#" title="마크2"></a></li>
+                        <li><a href="#" title="마크3"></a></li>
+                    </ul>
+                    <p>안녕하세요. 웹 프론트엔드 개발자를 희망하는 지원자 최혜진입니다.
+                    </p>
                 </div>
             </div>
-            <p>안녕하세요. 웹 프론트엔드 개발자를 희망하는 지원자 최혜진입니다.
-            </p>
         </div>
         <div id="slide3">
             <div class="panel">
@@ -121,49 +125,49 @@
                     <div class="skill-name">HTML</div>
                     <div class="progress">
                         <div class="bar"></div>
-                        <div class="stats80" data-num="80"></div>
+                        <div class="stats" data-num="80"></div>
                     </div>
                 </div>
                 <div class="skill css">
                     <div class="skill-name">CSS</div>
                     <div class="progress">
                         <div class="bar"></div>
-                        <div class="stats80" data-num="80"></div>
+                        <div class="stats" data-num="80"></div>
                     </div>
                 </div>
                 <div class="skill scss">
                     <div class="skill-name">SCSS</div>
                     <div class="progress">
                         <div class="bar"></div>
-                        <div class="stats60" data-num="60"></div>
+                        <div class="stats" data-num="60"></div>
                     </div>
                 </div>
                 <div class="skill js">
                     <div class="skill-name">JS</div>
                     <div class="progress">
                         <div class="bar"></div>
-                        <div class="stats50" data-num="50"></div>
+                        <div class="stats" data-num="50"></div>
                     </div>
                 </div>
                 <div class="skill jquery">
                     <div class="skill-name">jQuery</div>
                     <div class="progress">
                         <div class="bar"></div>
-                        <div class="stats60" data-num="60"></div>
+                        <div class="stats" data-num="60"></div>
                     </div>
                 </div>
                 <div class="skill vuejs">
                     <div class="skill-name">vue.js</div>
                     <div class="progress">
                         <div class="bar"></div>
-                        <div class="stats20" data-num="20"></div>
+                        <div class="stats" data-num="20"></div>
                     </div>
                 </div>
             </div>
         </div>
         <div id="slide4">
-            <div class="panel">
-                <h2 data-aos="fade-up" data-aos-duration="3000">Projects</h2>
+            <div class="panel" data-aos="fade-up" data-aos-duration="3000">
+                <h2>Projects</h2>
             </div>
             <ul>
                 <li><a href="#" title="SK케미칼"><img src="./img/" alt="SK케미칼">SK케미칼</a>
