@@ -1,12 +1,44 @@
 $(function () {
   // HEADER:
   $('header .knob').hover(function () {  
-    $('header').css({width:'20%',backgroundColor:'#444'});
-    $(this).css({display:none});
+    $('header').css({width:'20%',backgroundColor:'rgba(190, 164, 139, .8)'});
+    $('.knob').css({display:none});
   },function () {  
     $('header').css({width:'80px'});
   });
   
+  // WHERE-ARE-WE:
+  $('')
+  // SNOW EFFEC:
+  var particles= document.getElementById("particles");
+
+function main(){
+    var np = document.documentElement.clientWidth / 29;
+    particles.innerHTML = "";
+    for (var i = 0; i < np; i++) {
+        var w = document.documentElement.clientWidth;
+        var h = document.documentElement.clientHeight;
+        var rndw = Math.floor(Math.random() * w ) + 1;
+        var rndh = Math.floor(Math.random() * h ) + 1;
+        var widthpt = Math.floor(Math.random() * 8) + 3;
+        var opty = Math.floor(Math.random() * 5) + 2;
+        var anima = Math.floor(Math.random() * 12) + 8;
+
+        var div = document.createElement("div");
+        div.classList.add("particle");
+        div.style.marginLeft = rndw+"px";
+        div.style.marginTop = rndh+"px";
+        div.style.width = widthpt+"px";
+        div.style.height = widthpt+"px";
+        div.style.background = "white";
+        div.style.opacity = opty;
+        div.style.animation = "move "+anima+"s ease-in infinite ";
+        particles.appendChild(div);
+    }
+}
+window.addEventListener("resize", main);
+window.addEventListener("load", main);
+  // SLIDE1:
   // SKILLS:
   $(window).scroll(function () {
     var sct = $(window).scrollTop(),
@@ -29,14 +61,14 @@ $(function () {
   
         function textNum() {
           var currentWidth = (progressBar.width() / progressWrap.width()) * 100;
-          progressText.text(Math.floor(currentWidth) + "%");
+          progressText.text(Math.ceil(currentWidth) + "%");
         }
   
       });
     }
   });
 //SLIDE4:
-const box=$('#stories .container .contents');
+const box=$('#slide4 .container .contents');
 const prev=$('.content-btn .prev');
 const next=$('.content-btn .next');
 let col1=0,
@@ -63,7 +95,7 @@ function events(){
     if(col3<0) col3=3;
     if(col4<0) col4=3;
 }
-$('#stories').hover(function(){
+$('#slide4').hover(function(){
     clearInterval(timer);
 },function(){
     timer=setInterval(events,2500);
@@ -107,6 +139,19 @@ prev.on('click',function(){
     if(col4>3) col4=0;
     return false;
 });
+  // HOVER시 ICON 경로 변경:
+  $('li.naverblogicon').hover(function () {  
+    $('li.naverblogicon img').attr({src:'./img/naverblogicon.png'});
+  },function () {  
+    $('li.naverblogicon img').attr({src:'./img/naverblog-logo.png'});
+  });
+  $('li.kakaotalkicon').hover(function () {  
+    $('li.kakaotalkicon img').attr({src:'./img/kakaotalkicon.png'});
+  },function () {  
+    $('li.kakaotalkicon img').attr({src:'./img/kakaotalk.png'});
+  });
+
+
   // <!-- Initialize Swiper -->    
   var swiper = new Swiper(".mySwiper", {
     direction: "vertical",
