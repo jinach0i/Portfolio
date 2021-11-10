@@ -6,6 +6,7 @@ $(function () {
   },function () {  
     $('header').css({width:'80px'});
   });
+  
   // SKILLS:
   $(window).scroll(function () {
     var sct = $(window).scrollTop(),
