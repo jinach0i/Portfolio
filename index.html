@@ -14,6 +14,24 @@
 	<meta name='Author-Date' content=''>
 	<meta name='Copyright' content=''>
 	<meta name='Robots' content='index,follow'>
+    <!-- FAVICON: -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+    <link rel="manifest" href="./img/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./img/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <!-- FONTS: -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,12 +57,63 @@
         </ul>
     </div>
     <div id="wrap">
-        <div class="blur"></div>
-        <div class="particles"></div>
         <div id="slide1">
             <div class="topgate"></div>
             <div class="rightgate"></div>
             <div class="bottomgate"></div>
+            <nav class="Navbar">
+                <a href="#" id="toggle" class="Toggle Navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse"><span></span></a>
+                
+                <a class="Navbar-brand u-pullRight" href="#link">Ultralinx</a>
+                
+                <div id="navbarCollapse" class="Navbar-menu">
+                  <ul class="Navbar-menu-major">
+                    <li><a href="#link">Gear</a></li>
+                    <li><a href="#link">Music</a></li>
+                    <li><a href="#link">Travel</a></li>
+                    <li><a href="#link">Photography</a></li>
+                  </ul>
+                  <div class="Navbar-menu-minor">
+                    <ul>
+                      <li><a href="#link">Store</a></li>
+                      <li><a href="#link">Deals</a></li>
+                      <li><a href="#link">Themes</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="#link">About</a></li>
+                      <li><a href="#link">Advertising</a></li>
+                      <li><a href="#link">Privacy Policy</a></li>
+                      <li><a href="#link">Contact</a></li>
+                    </ul>
+                    <ul class="Navbar-menu-social u-Navbar-hidden@sm-up">  
+                      <li>
+                        <a class="SocialLink" href="#link">
+                          <svg class="SocialLink-icon"><use xlink:href="#facebook" /></svg>
+                          <span class="SocialLink-text">Facebook</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="SocialLink" href="#link">
+                          <svg class="SocialLink-icon"><use xlink:href="#twitter" /></svg>
+                          <span class="SocialLink-text">Twitter</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="SocialLink" href="#link">
+                          <svg class="SocialLink-icon"><use xlink:href="#instagram" /></svg>
+                          <span class="SocialLink-text">Instagram</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                  
+                <ul class="Navbar-quickLinks">  
+                  <li><a href="#link">Facebook</a></li>
+                  <li><a href="#link">Twitter</a></li>
+                  <li><a href="#link">Instagram</a></li>
+                </ul>
+              </nav>
             <header id="header">
                 <h1 class="hidden"><a href="index.html" title="home"><img src="" alt="logo">logo</a></h1>
                 <div class="index">
@@ -59,15 +128,14 @@
                 <a href="#" class="knob"><i class="fas fa-angle-double-right"></i>
                 <div class="shortcuts">
                     <ul>
-                        <li class="kakaotalkicon"><a href="#"><img src="./img/kakaotalk.png" alt="kakao talk"></a></li>
+                        <li><a href="#"><img src="./img/kakaotalkicon.png" alt="kakao talk"></a></li>
                         <li><a href="#" title="line"><i class="fab fa-line"></i></a></li>
                         <li><a href="#" title="email"><i class="far fa-envelope"></i></a></li>
                     </ul>
                 </div>
             </header>
             <div class="ribbon">
-                <h1>Web Publisher & Front-end Developer CHJ</h1>
-                <h3>~부제목~</h3>
+                <h1>Front-end Developer CHJ</h1>
             </div>
             <div class="container">
                 <div class="title-box">
@@ -126,9 +194,9 @@
                 </div>
                 <div class="whatbenefitswhenworkwithme">
                     <ul>
-                        <li><strong>적응력</strong><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatibus, inventore suscipit quae quidem, incidunt atque assumenda delectus aliquam ipsam nisi commodi nobis? Nisi reiciendis voluptatum repellendus nihil inventore sed!</p></li>
-                        <li><strong>끈기</strong><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id reprehenderit harum, rem velit iste ea distinctio corporis similique molestiae, neque ullam alias architecto ipsam deleniti est totam, recusandae sit cum?</p></li>
-                        <li><strong>고객지향적</strong><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum itaque tenetur tempore totam labore libero asperiores sunt, commodi ducimus error quasi nesciunt velit in repellendus beatae! Atque quibusdam eius cumque.</p></li>
+                        <li><strong>긍정적</strong><p>안되도 잠시 안되는것일뿐, 곧 되게 만들면 된다고 생각합니다</p></li>
+                        <li><strong>끈기</strong><p>포기란 배추를 셀 때 쓰는 단위죠</p></li>
+                        <li><strong>고객지향적</strong><p>작업의 궁극적 목표는 '고객입장에서 회사에게'라고 생각합니다</p></li>
                     </ul>
                 </div>
             </div>
@@ -139,52 +207,52 @@
             </div>
             <div class="skills">
                 <div class="skill html">
-                    <div class="skill-name">HTML</div>
+                    <div class="skill-name"><i class="fab fa-html5"></i>HTML</div>
                     <div class="progress">
                         <div class="bar"></div>
                         <div class="stats" data-num="80"></div>
                     </div>
                 </div>
                 <div class="skill css">
-                    <div class="skill-name">CSS</div>
+                    <div class="skill-name"><i class="fab fa-css3-alt"></i>CSS</div>
                     <div class="progress">
                         <div class="bar"></div>
                         <div class="stats" data-num="80"></div>
                     </div>
                 </div>
                 <div class="skill scss">
-                    <div class="skill-name">SCSS</div>
+                    <div class="skill-name"><i class="fab fa-sass"></i>SCSS</div>
                     <div class="progress">
                         <div class="bar"></div>
-                        <div class="stats" data-num="60"></div>
+                        <div class="stats" data-num="59"></div>
                     </div>
                 </div>
                 <div class="skill js">
-                    <div class="skill-name">JS</div>
+                    <div class="skill-name"><i class="fab fa-js-square"></i>JS</div>
                     <div class="progress">
                         <div class="bar"></div>
                         <div class="stats" data-num="50"></div>
                     </div>
                 </div>
                 <div class="skill jquery">
-                    <div class="skill-name">jQuery</div>
+                    <div class="skill-name"><img src="./img/jquery+icon-1320185152994214115_64.ico" alt="jquery icon"> jQuery</div>
                     <div class="progress">
                         <div class="bar"></div>
-                        <div class="stats" data-num="60"></div>
+                        <div class="stats" data-num="59"></div>
                     </div>
                 </div>
                 <div class="skill vuejs">
-                    <div class="skill-name">vue.js</div>
+                    <div class="skill-name"><i class="fab fa-vuejs"></i>vue.js</div>
                     <div class="progress">
                         <div class="bar"></div>
-                        <div class="stats" data-num="20"></div>
+                        <div class="stats" data-num="19"></div>
                     </div>
                 </div>
                 <div class="skill react">
-                    <div class="skill-name">React</div>
+                    <div class="skill-name"><i class="fab fa-react"></i>React</div>
                     <div class="progress">
                         <div class="bar"></div>
-                        <div class="stats" data-num="20"></div>
+                        <div class="stats" data-num="19"></div>
                     </div>
                 </div>
             </div>
@@ -193,15 +261,6 @@
             <div class="title-box">
                 <h2>Projects</h2>
             </div>
-            <ul>
-                <li class="project"><a href="#" title="SK케미칼"><img src="./img/thumbskchemicals.png" alt="SK케미칼"><span class="prj-text">SK 케미칼</span></a>
-                </li>
-                <li><a href="#" title="국민건강보험공단"><img src="./img/thumbnhis.png" alt="국민건강보험공단"></a><span>국민건강보험공단</span></li>
-                <li><a href="#" title="첫 테트리스"><img src="./img/thumbnhis.png" alt="테트리스">테트리스</a></li>
-                <li><a href=""><img src="./img/thumbnhis.png" alt="">스타벅스</a></li>
-                <li><a href=""><img src="./img/thumbnhis.png" alt="">네이버웨일</a></li>
-                <li><a href=""><img src="./img/thumbnhis.png" alt="">보그(리뉴얼)</a></li>
-            </ul>
             <div class="selected-stories">
                 <div class="container">
                     <div class="stories-body">
@@ -210,10 +269,10 @@
                                 <img src="./img/thumbskchemicals.png" alt="SK Chemicals">
                             </div>
                             <div class="con-txt">
-                                <a href="#"><span>반응형</span> | 프로젝트</a>
+                                <a href="https://jinach0i.github.io/Prj-SKChemicals/" target="_blank"><span>반응형</span> | 프로젝트</a>
                                 <dl>
-                                    <dt><a href="#">SK 케미칼</a></dt>
-                                    <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur temporibus dignissimos </dd>
+                                    <dt><a href="https://jinach0i.github.io/Prj-SKChemicals/" target="_blank">SK 케미칼</a></dt>
+                                    <dd></dd>
                                 </dl>
                             </div>
                         </div>
@@ -222,40 +281,40 @@
                                 <img src="./img/thumbnhis.png" alt="국민건강보험공단">
                             </div>
                             <div class="con-txt">
-                                <a href="#"><span>관공서</span> | 프로젝트</a>
+                                <a href="https://jinach0i.github.io/NHIS-/" target="_blank"><span>관공서</span> | 프로젝트</a>
                                 <dl>
-                                    <dt><a href="#">국민건강보험공단</a></dt>
-                                    <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur temporibus dignissimos </dd>
+                                    <dt><a href="https://jinach0i.github.io/NHIS-/" target="_blank">국민건강보험공단</a></dt>
+                                    <dd></dd>
                                 </dl>
                             </div>
                         </div>
                         <div class="contents col3">
                             <div class="con-img">
-                                <img src="./img/thumbskchemicals.png" alt="DeathValley">
+                                <img src="" alt="">
                             </div>
                             <div class="con-txt">
-                                <a href="#"><span>andrew shepherd</span> | landscape</a>
+                                <a href="#"><span></span> | </a>
                                 <dl>
-                                    <dt><a href="#">City of Angels, Valley of Death</a></dt>
-                                    <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur temporibus dignissimos </dd>
+                                    <dt><a href="#"></a></dt>
+                                    <dd></dd>
                                 </dl>
                             </div>
                         </div>
                         <div class="contents col4">
                             <div class="con-img">
-                                <img src="./img/thumbskchemicals.png" alt="DeathValley">
+                                <img src="" alt="">
                             </div>
                             <div class="con-txt">
-                                <a href="#"><span>andrew shepherd</span> | landscape</a>
+                                <a href="#"><span></span> | </a>
                                 <dl>
-                                    <dt><a href="#">City of Angels, Valley of Death</a></dt>
-                                    <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur temporibus dignissimos </dd>
+                                    <dt><a href="#"></a></dt>
+                                    <dd></dd>
                                 </dl>
                             </div>
                         </div>
                         <div class="content-btn">
-                            <a href="#" class="prev">prev</a>
-                            <a href="#" class="next">next</a>
+                            <a href="#" class="prev">Prev</a>
+                            <a href="#" class="next">Next</a>
                         </div>
                     </div>
                 </div>
@@ -265,8 +324,14 @@
             <div class="title-box"><h2>Contact Me</h2></div>
             <div class="bestregards">
                 <div class="greeting">
-                    <h4>안녕하세요. ~한 지원자 최혜진입니다.</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem amet quas saepe id nihil minus vitae porro, nulla vel ab recusandae assumenda culpa rem dolores illo optio. Sed, eum distinctio!</p>
+                    <h4>안녕하세요. 프론트엔드를 희망하는 지원자 최혜진입니다!</h4>
+                    <p>
+                        작업할 때마다 마주했던 처음부터 끝까지 작고 큰 문제들을 끝끝내 해결했을 때의 그 성취감은
+                        지금까지 단 한번도 질린 적이 없습니다. <br>
+                        개발자로서의 숙명인 '꾸준한 공부'와 맡은 바에 끝까지 '책임'을 다 하는 것은 기본으로, <br>
+                        현재보다 더 나아지고 싶은 열망을 뒤늦게 찾은 소중한 꿈에 잇고자 도약하려는 <br>
+                        저 최혜진에게 관심이 생기셨다면, <br>
+                        아래의 버튼을 살포시 눌러주세요!</p>
                 </div>
                 <div class="sns">
                     <ul>
@@ -281,7 +346,9 @@
             <button class="contact-btn">Contact</button>
             <footer id="footer">
                 <address>
-                    COPYRIGHTⓒ by최혜진. All rights reserved.
+                    <p>COPYRIGHTⓒ by최혜진.</p>
+                    <p>All rights reserved.</p>
+                    <p>끝까지 봐주셔서 감사합니다. &#128516;</p>
                 </address>
                 <div class="to-the-top">
                     <a href="#">

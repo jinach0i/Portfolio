@@ -1,11 +1,12 @@
 @charset "utf-8";
-*{box-sizing: border-box; font-family: 'Oswald', sans-serif;}
+@font-face{src: url(../fonts/Gong\ Gothic\ Medium.ttf); font-family: '공체';}
+*{box-sizing: border-box; font-family: '공체','Oswald', sans-serif;}
 body{font-size: 16px; background-color: antiquewhite;;}
 a{display: block; text-align: center; }
 img{max-width: 100%; max-height: 100%;}
 h2{font-weight: bold; text-transform: uppercase; font-size: 30px; text-align: center;}
 /* IDs: */
-#wrap>div{width: 100%; height: 100%; padding: 5rem;}
+#wrap>div{width: 100%; height: 100%; padding: 5rem; margin-bottom: 1rem;}
 #slide3{display: flex;}
 /* COMMON: */
 /* color:#8ba969/color:#a2c67a/color:#b9e18c/YYellowcolor:#e9dca6/yellowcolor:#e7e3d9/blackcolor:#525252 */
@@ -31,8 +32,8 @@ header .shortcuts ul li{margin: 5px auto; width: 30px; height: 30px; }
 header .shortcuts ul li a{}
 header .shortcuts ul li a img{}
 header .shortcuts ul li a i{font-size: 30px; box-sizing: border-box;}
-header .shortcuts ul li a .fa-line:hover{color: limegreen;}
-header .shortcuts ul li a .fa-envelope:hover{color: tomato;}
+header .shortcuts ul li a .fa-line{color: limegreen;}
+header .shortcuts ul li a .fa-envelope{color: tomato;}
 /* FIXED-PATH: */
 .fixed-path{display: block; position: fixed; top: 70%; right: 0; z-index: 9; width: 40px; height: 100%; margin: 5px;}
 .fixed-path ul{display: flex; flex-direction: column;}
@@ -46,72 +47,6 @@ header .shortcuts ul li a .fa-envelope:hover{color: tomato;}
 .fixed-path ul li.study-room{}
 .fixed-path ul li.telephone-corridor{}
 .fixed-path ul li a{display: block;}
-/* SNOW EFFECT: */
-.blur,
-.main,
-.particles{
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-.blur{
-/*    background-color: #212121; */
-    
-    filter: blur(5px);
-    transform: scale(1.2);
-/*     animation: bg 8s linear infinite alternate; */
-
-}
-.main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 100;
-}
-.title{
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 14px;
-    font-weight: 100;
-    letter-spacing: 15px;
-    padding: 12.5px 25px;
-    text-shadow: 1px 1px 10px black;
-    border: 2px solid rgba( 255, 255, 255, .5);
-    border-radius: 4px;
-    color: white;
-}
-
-.particles{
-    position: absolute;
-    z-index: 200;
-    overflow: hidden;
-}
-
-.particle{
-    border-radius: 50%;
-    filter: blur(3px);
-    position: absolute;
-}
-@keyframes bg {
-    0%{ transform: scale(1.2);}
-    100%{ transform: scale(1.3);}
-}
-@keyframes move {
-    0%{
-        transform: translateX(0);
-        opacity: 0;
-    }
-    10% ,90%{
-        opacity: 1;
-    }
-    100%{
-        transform: translateX(45vw);
-        opacity: 0;
-    }
-}
 
 /* SLIDE1: */
 .topgate{position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 50%; background-color:  : entrance-h 4s infinite;}
@@ -164,29 +99,31 @@ header .shortcuts ul li a .fa-envelope:hover{color: tomato;}
 /* SLIDE2: */
 #slide2{}
 #slide2 .contents{margin: 5rem auto;}
-#slide2 .contents .portrait{text-align: center;}
-#slide2 .contents .portrait>div{width: 150px; height: 150px; border: 3px ridge gold; background: url('../img/selfie20191013_152919.jpg') no-repeat center center/cover; margin: 0 auto; display: inline-block; border-radius: 40px 0 0 0;}
-#slide2 .contents h3{text-align: center; font-size: 20px;  display: inline-block;}
+#slide2 .contents .portrait{text-align: center; }
+#slide2 .contents .portrait>div{width: 200px; height: 200px;  background: url('../img/742oUTT2_3DSxR4_2kxCQv_480000.jpg') no-repeat 15px center/cover; margin-right: 2rem; display: inline-block;  position: relative;}
+#slide2 .contents .portrait>div::before{content: ''; position: absolute; border: 4px solid bisque; width: 100%; height: 90%;  top: -30px; left: -30px;}
+#slide2 .contents h3{text-align: center; font-size: 20px;  display: inline-block; position: relative; top: -65px; right: 10px;}
 #slide2 .whatbenefitswhenworkwithme{}
-#slide2 .whatbenefitswhenworkwithme ul{display: flex; justify-content: space-around; margin-top: 15%;}
-#slide2 .whatbenefitswhenworkwithme ul li{background: linear-gradient(lightyellow,lightblue); border-radius: 100%; width: 200px; height: 200px; text-align: center; padding-top: 20px; margin: 10px;}
-#slide2 .whatbenefitswhenworkwithme ul li strong{font-size: 25px; }
+#slide2 .whatbenefitswhenworkwithme ul{display: flex; justify-content: space-around; margin-top: 5%;}
+#slide2 .whatbenefitswhenworkwithme ul li{background: linear-gradient(lightyellow,lightblue); border-radius: 100%; width: 250px; height: 250px; text-align: center; padding-top: 20px; margin: 10px;}
+#slide2 .whatbenefitswhenworkwithme ul li strong{font-size: 25px; margin: 2rem; display: block;}
 #slide2 .whatbenefitswhenworkwithme ul li a{}
 /* SLIDE3: */
 #slide3{display: flex; flex-direction: column;}
 #slide3 .skills{margin: 0 auto;}
-#slide3 .skill-name{margin: 0 auto; font-weight: bold;}
+#slide3 .skill-name{margin: 0 1rem; font-weight: bold; text-align: center;}
+.skill-name img{width: 25px; height: 25px; margin-right: 1rem;}
+.skill-name i{font-size: 25px; margin-right: 1rem;}
+i.fa-html5{color: orange;}
+i.fa-css3-alt{color: blue;}
+i.fa-sass{color: palevioletred;}
+i.fa-js-square{color: gold;}
+i.fa-vuejs{color:forestgreen;}
+i.fa-react{color: skyblue;}
 .skill{display: flex; justify-content: space-between; margin: 2rem auto;}
-.skill-name{}
-.progress{position: relative; width: 20rem; height: 30px; border: 1px solid gainsboro; border-radius: 6px; box-sizing: border-box;}
-.progress .bar{position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color:;}
-.html .progress .bar{background: linear-gradient(90deg,gold,lightyellow,lightcyan); width:0}
-.css .progress .bar{background: linear-gradient(90deg,slateblue,lightsalmon,lightcoral); width:0}
-.scss .progress .bar{background: linear-gradient(90deg,lightpink,lightsalmon); width:0}
-.js .progress .bar{background: linear-gradient(90deg,#9dd9c5,turquoise,aquamarine);  width:0}
-.jquery .progress .bar{background: linear-gradient(90deg,orange,lightsalmon,deepskyblue); width:0;}
-.vuejs .progress .bar{background: linear-gradient(90deg,lightsalmon,tomato,orange); width:0}
-.react .progress .bar{background: linear-gradient(90deg,lavender,skyblue,lightcyan); width:0}
+
+.progress{position: relative; width: 40rem; height: 30px; border: 1px solid gainsboro; border-radius: 6px; box-sizing: border-box;}
+.progress .bar{position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(90deg,lavender,skyblue,lightcyan); width:0}
 .progress .stats{position: absolute; top: 0; right: 15px; bottom: 0; font-size: 1.1rem; line-height: 30px; color: black;}
 
 /* SLIDE4: */
@@ -353,20 +290,20 @@ header .shortcuts ul li a .fa-envelope:hover{color: tomato;}
 #slide5{}
 .bestregards{display: flex; justify-content: space-around;}
 .bestregards .greeting{border-right: 1px solid grey; padding: 5rem; width: 50%;}
-.bestregards .greeting h4{}
+.bestregards .greeting h4{font-size: 20px; font-weight: bold;}
 .bestregards .greeting p{}
 .bestregards .sns{padding: 3rem; width: 50%;}
-.bestregards .sns ul{display: flex;}
-.bestregards .sns ul li{margin: 2rem; text-transform: uppercase; transition: .4s;}
+.bestregards .sns ul{}
+.bestregards .sns ul li{margin: 2rem; display: inline-block; text-transform: uppercase; transition: .4s;}
 .bestregards .sns ul li:hover .fa-line{color: limegreen;}
 .bestregards .sns ul li:hover .fa-envelope{color: tomato;}
 .bestregards .sns ul li:hover .fa-github{color:slateblue;}
 .bestregards .sns ul li a{display: flex; flex-direction: column; width: 50px; height: 50px;     text-align: center;}
-.bestregards .sns ul li a i{font-size: 50px}
+.bestregards .sns ul li a i{font-size: 58px; line-height: 49px;}
 #slide5 button{width: 120px; height: 44px; padding: 5px 12px; margin: 20px auto; background-color: #fff; color: #333; font-size: 15px; border: 1px solid black; border-radius: 6px; box-sizing: border-box; transition: .3s; cursor: pointer; display: block;}
 #slide5 button:hover{background-color: black; color: white;}
 /* FOOTER: */
-footer{}
+footer{border-top: 3px ridge lightyellow; padding-top: 2rem;}
 footer address{text-align: center;}
 /* TOTHETOP: */
 .to-the-top{background: white; position: fixed; bottom: 5%; right: 5%; width: 50px; height: 50px; border: 1px solid grey; text-align: center;}
