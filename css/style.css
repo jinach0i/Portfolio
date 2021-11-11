@@ -6,8 +6,8 @@ a{display: block; text-align: center; }
 img{max-width: 100%; max-height: 100%;}
 h2{font-weight: bold; text-transform: uppercase; font-size: 30px; text-align: center;}
 /* IDs: */
-#wrap>div{width: 100%; height: 100%; padding: 5rem; margin-bottom: 1rem;}
-#slide3{display: flex;}
+#wrap>div{width: 100%; height: 100%; padding: 2rem; margin-bottom: 1rem;}
+
 /* COMMON: */
 /* color:#8ba969/color:#a2c67a/color:#b9e18c/YYellowcolor:#e9dca6/yellowcolor:#e7e3d9/blackcolor:#525252 */
 .container{width: 100%; margin: 0 auto; height: 100vh; display: flex;}
@@ -18,25 +18,44 @@ h2{font-weight: bold; text-transform: uppercase; font-size: 30px; text-align: ce
 #skip ul li a{ font-size: 0; text-align: center; color: white;}
 #skip ul li a:focus{font-size: 16px; padding: 14px;}
 /* HEADER: */
-.knob{margin: 100px 20px; position: absolute; top: 35%; left: 10%;}
+/* .knob{margin: 100px 20px; position: absolute; top: 35%; left: 10%;}
 .knob i{font-size: 25px; color: snow;}
 .knob:hover header{width: 20%; background-color: #444; box-shadow: 0 4px 4px #222; }
-.knob:hover header ul li a{display: none;}
-header{position: fixed; top: 0; bottom: 0; left: 0; background: rgba(190, 164, 139, .6); width: 80px; height: 100%; z-index: 1; display: flex; flex-direction: column; justify-content: space-between; transition: .5s;}
-header .index{display: none; position: absolute; top: 0%;}
-header .index ul{}
-header .index ul li{font-size: 20px;}
-header .index ul li a{color: seashell;}
-header .shortcuts ul{display: flex; flex-direction: column; }
+.knob:hover header ul li a{display: none;} */
+
+input#menuicon{display: none;}
+input#menuicon +label{display: block; margin: .5rem; width: 40px; height: 30px; position: fixed; cursor: pointer; top: 50%; left: 1%; z-index: 9;}
+input#menuicon +label.scroll-berger{position: fixed; left: 0%; transition: .4s;}
+input#menuicon + label span{display: block; position: absolute; width: 100%; height: 5px; border-radius: 30px; background-color: #e7ded7; transition: .4s; }
+input#menuicon + label span:nth-child(1){top: 0}
+input#menuicon + label span:nth-child(2){top: 50%; transform: translateY(-50%);}
+input#menuicon + label span:nth-child(3){bottom: 0;}
+input#menuicon + label i{display: block; position: absolute;} 
+input#menuicon:checked + label{z-index: 6;}
+input#menuicon:checked + label i{display: none;}
+input#menuicon:checked + label span{background-color: #e7ded7; display: block;}
+input#menuicon:checked + label span:nth-child(1){top: 50%; transform: translateY(-50%) rotate(45deg);}
+input#menuicon:checked + label span:nth-child(2){opacity: 0;}
+input#menuicon:checked + label span:nth-child(3){bottom: 50%; transform: translateY(50%) rotate(-45deg);}
+input#menuicon:checked + label + header{left: 0;}
+header{position: fixed; top: 0; bottom: 0; left: -220px; background: rgba(190, 164, 139, .6); width: 300px; height: 100%;  display: flex; flex-direction: column; justify-content: space-between; transition: .5s; padding-right: 100px; }
+header .index{display: block; position: relative; top: -20%;}
+header .index ul{padding: 1rem;}
+header .index ul li{font-size: 30px; text-align: center;  margin: 0.5rem;}
+header .index ul li a{color: #444; display: block;}
+header .shortcuts ul{display: flex; margin: 2rem;}
 header .shortcuts ul li{margin: 5px auto; width: 30px; height: 30px; }
 header .shortcuts ul li a{}
 header .shortcuts ul li a img{}
 header .shortcuts ul li a i{font-size: 30px; box-sizing: border-box;}
 header .shortcuts ul li a .fa-line{color: limegreen;}
 header .shortcuts ul li a .fa-envelope{color: tomato;}
+/* scroll시 */
+.scrollheader{position: fixed; top: 0; bottom: 0; left: -240px; background: #bea48b; width: 300px; height: 100%; z-index: 1; display: flex; flex-direction: column; justify-content: space-between; transition: .5s; box-shadow: 0 5px 5px #444;}
+
 /* FIXED-PATH: */
 .fixed-path{display: block; position: fixed; top: 70%; right: 0; z-index: 9; width: 40px; height: 100%; margin: 5px;}
-.fixed-path ul{display: flex; flex-direction: column;}
+.fixed-path ul{display: flex; flex-direction: column; margin: 5px;}
 .fixed-path ul::after{content: ''; background-color: saddlebrown; width: 5px; height: auto; position: absolute;  top: 50%; z-index: -1;}
 .fixed-path ul li{width: 20px; height: 20px; border-radius: 100%; border: none; background: rgba(255,255,255,.4); box-shadow: inset -1px -2px 0 0 lightblue; margin-bottom: 1rem; cursor: pointer;}
 .fixed-path ul li:hover{background-color: gold;}
@@ -59,9 +78,8 @@ header .shortcuts ul li a .fa-envelope{color: tomato;}
 }
 
 #slide1{background: url('https://www.reviewgeek.com/p/uploads/2020/05/96ec61be.png') no-repeat center center/cover;}
-.ribbon{border-top: 3px outset snow; border-bottom: snow 3px outset; position: absolute; top: 40%; left: 0%; right: 0%; background: rgba(0,0,0,.1);  width: 50%; padding: 2rem; margin: 0 auto; z-index: 1;}
-.ribbon h1{font-size: 2.5rem; text-align: center;}
-.ribbon h3{font-size: 1rem; text-align: center;}
+.ribbon{border-top: 5px outset rgb(152, 122, 223); border-bottom: snow 3px outset; position: absolute; top: 40%; left: 0%; right: 0%; background: rgba(0,0,0,.1);  width: 50%; padding: 2rem; margin: 0 auto; z-index: 1;}
+.ribbon h1{font-size: 2.5rem; text-align: center; color: snow; text-shadow: 5px 5px 5px #444;}
 #slide1 .container{}
 #slide1 .container .title-box{position: relative; padding: 20px; box-shadow: 5px 5px 20px rgba(0, 0, 0, .6);  width: 80%; height: 80%; margin: 5% auto; }
 /* PROFILE: */
@@ -93,24 +111,34 @@ header .shortcuts ul li a .fa-envelope{color: tomato;}
 .tile23{background-color: snow; float: left;}
 .tile24{background-color: forestgreen; float: left;}
 .tile25{background-color: crimson; float: left;}
-.scroll-down{border-radius: 6px; background: rgba(255, 255, 255, .8); width: 100px; height: 25px; text-align: center; position: absolute; bottom: 10%; left: 50%; line-height: 25px; transition: .4; }
-.scroll-down::before{content: ''; background: rgba(34, 34, 34, 0.4); width: 4px; height: 68px; position: absolute; top: 40px; left: 50%;}
-.scroll-down::after{content: ''; background-color: black; width: 4px; height: 24px; position: absolute; top: 25px; left: 50%;}
+.scroll-down{border-radius: 6px; background: rgba(255, 255, 255, .8); width: 100px; height: 31px; text-align: center; position: absolute; bottom: 10%; left: 50%; line-height: 25px; padding: 5px; font-size: 14px;}
+.scroll-down::before{content: ''; background: rgba(34, 34, 34, 0.4); width: 4px; height: 80px; position: absolute; top: 55px; left: 50%;}
+.scroll-down::after{content: ''; background-color: black; width: 4px; height: 24px; position: absolute; top: 31px; left: 50%;}
 /* SLIDE2: */
 #slide2{}
 #slide2 .contents{margin: 5rem auto;}
-#slide2 .contents .portrait{text-align: center; }
-#slide2 .contents .portrait>div{width: 200px; height: 200px;  background: url('../img/742oUTT2_3DSxR4_2kxCQv_480000.jpg') no-repeat 15px center/cover; margin-right: 2rem; display: inline-block;  position: relative;}
-#slide2 .contents .portrait>div::before{content: ''; position: absolute; border: 4px solid bisque; width: 100%; height: 90%;  top: -30px; left: -30px;}
-#slide2 .contents h3{text-align: center; font-size: 20px;  display: inline-block; position: relative; top: -65px; right: 10px;}
-#slide2 .whatbenefitswhenworkwithme{}
-#slide2 .whatbenefitswhenworkwithme ul{display: flex; justify-content: space-around; margin-top: 5%;}
-#slide2 .whatbenefitswhenworkwithme ul li{background: linear-gradient(lightyellow,lightblue); border-radius: 100%; width: 250px; height: 250px; text-align: center; padding-top: 20px; margin: 10px;}
+#slide2 .contents .portrait{text-align: center; box-shadow: 4px 0 4px #666; padding: 2rem 1rem 1rem 1rem;
+border-radius: 3rem 3rem 3rem 3rem; width: 60%; margin: 0 auto; background: rgba(204, 218, 235, .8);}
+#slide2 .contents .portrait>div{width: 250px; height: 200px; background: url('../img/포폴셀피2.png') no-repeat center center/cover; margin-right: 2rem; display: inline-block;  position: relative; margin-bottom: 2rem;}
+#slide2 .contents .portrait>div::before{content: ''; position: absolute; border: 4px solid bisque; width: 250px; height: 201px;  top: 10px; left: 18px;}
+.portrait strong{display: block;}
+#slide2 .contents h3{text-align: center; display: inline-block;font-size: 28px; margin-left: 3rem;}
+#slide2 .whatbenefitswhenworkwithme{margin-top: 2rem; padding: 2rem; background-color: bisque; box-shadow: 8px 6px 8px #888; border-radius: 8rem 0 8rem 0;}
+#slide2 .whatbenefitswhenworkwithme h4{font-size: 24px; text-align: center; margin-bottom: 1rem;}
+#slide2 .whatbenefitswhenworkwithme ul{display: flex; justify-content: space-evenly; }
+#slide2 .whatbenefitswhenworkwithme ul li{background: linear-gradient(lightyellow,lightblue); border-radius: 100%; width: 250px; height: 250px; text-align: center; padding-top: 20px; margin: 10px; box-shadow: 5px 5px 10px #888;}
 #slide2 .whatbenefitswhenworkwithme ul li strong{font-size: 25px; margin: 2rem; display: block;}
 #slide2 .whatbenefitswhenworkwithme ul li a{}
 /* SLIDE3: */
-#slide3{display: flex; flex-direction: column;}
-#slide3 .skills{margin: 0 auto;}
+#slide3{}
+#slide3 h3{text-align: center; font-size: 30px; text-decoration: underline #888 solid; margin-bottom: 2rem;}
+#slide3 .contents{}
+#slide3 .skills{margin: 0 auto; display: inline-block; border-right: 3px solid #888; padding: 2rem; width: 50%; float: left;}
+#slide3 .tools{margin: 0 auto; display: inline-block; width: 50%; padding: 2rem; text-align: center;}
+#slide3 .tools ul{}
+#slide3 .tools ul li{float: left; padding: 1rem; text-align: center;}
+#slide3 .tools ul li img{width: 30px; height: 30px;}
+#slide3 .tools ul li span{display: block; text-align: center;}
 #slide3 .skill-name{margin: 0 1rem; font-weight: bold; text-align: center;}
 .skill-name img{width: 25px; height: 25px; margin-right: 1rem;}
 .skill-name i{font-size: 25px; margin-right: 1rem;}
@@ -290,7 +318,7 @@ i.fa-react{color: skyblue;}
 #slide5{}
 .bestregards{display: flex; justify-content: space-around;}
 .bestregards .greeting{border-right: 1px solid grey; padding: 5rem; width: 50%;}
-.bestregards .greeting h4{font-size: 20px; font-weight: bold;}
+.bestregards .greeting h4{font-size: 20px; font-weight: bold; margin-bottom: 8px;}
 .bestregards .greeting p{}
 .bestregards .sns{padding: 3rem; width: 50%;}
 .bestregards .sns ul{}

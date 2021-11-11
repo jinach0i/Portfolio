@@ -1,10 +1,15 @@
 $(function () {
-  // HEADER:
-  $('header .knob').hover(function () {  
-    $('header').css({width:'20%',backgroundColor:'rgba(190, 164, 139, .8)'});
-  },function () {  
-    $('header').css({width:'80px'});
-  });
+  HEADER:
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 100) {
+        $("header").addClass("scrollheader"); 
+        $("label").addClass("scroll-berger");
+        //스크롤내리면 헤더 텍스트 전체적으로 작아짐
+    } else {
+        $("header").removeClass("scrollheader");
+        $("label").removeClass("scroll-berger");
+    }
+});
   
   // WHERE-ARE-WE:
   $('')
