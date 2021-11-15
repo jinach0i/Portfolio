@@ -14,7 +14,7 @@ h2{font-weight: bold; text-transform: uppercase; font-size: 30px; text-align: ce
 .hidden{display: block; text-indent: -9999px; font-size: 0;}
 .title-box{width: 80%; height: 3rem; padding: 5px; margin: 2rem auto; box-shadow: 2px 2px 2px gainsboro; line-height: 40px;}
 /* SKIP: */
-#skip{position: absolute; background-color: black; padding: 0; font-size: 0; z-index: 9999;}
+#skip{position: absolute; background-color: black; padding: 0; font-size: 0; z-index: 99999;}
 #skip ul li a{ font-size: 0; text-align: center; color: white;}
 #skip ul li a:focus{font-size: 16px; padding: 14px;}
 /* HEADER: */
@@ -84,7 +84,7 @@ header .shortcuts ul li a .fa-envelope{color: tomato;}
 #slide1 .container .title-box{position: relative; padding: 20px; box-shadow: 5px 5px 20px rgba(0, 0, 0, .6);  width: 80%; height: 80%; margin: 5% auto; }
 /* PROFILE: */
 .profile{width: 500px; height: 500px; position: absolute; top: 0; margin: 5rem auto; box-shadow: 10px 6px 10px black; display: none;}
-.tile{width: 100px; height: 100px; opacity: .8;}
+/* .tile{width: 100px; height: 100px; opacity: .8;}
 .tile:hover{}
 .tile1{background: rgba(255, 255, 255, .8); float: left; box-shadow: 5ps 5px 5px black inset;}
 .tile2{background-color: lightyellow; float: left;}
@@ -110,7 +110,7 @@ header .shortcuts ul li a .fa-envelope{color: tomato;}
 .tile22{background-color: honeydew; float: left;}
 .tile23{background-color: snow; float: left;}
 .tile24{background-color: forestgreen; float: left;}
-.tile25{background-color: crimson; float: left;}
+.tile25{background-color: crimson; float: left;} */
 .scroll-down{border-radius: 6px; background: rgba(255, 255, 255, .8); width: 100px; height: 31px; text-align: center; position: absolute; bottom: 10%; left: 50%; line-height: 25px; padding: 5px; font-size: 14px;}
 .scroll-down::before{content: ''; background: rgba(34, 34, 34, 0.4); width: 4px; height: 80px; position: absolute; top: 55px; left: 50%;}
 .scroll-down::after{content: ''; background-color: black; width: 4px; height: 24px; position: absolute; top: 31px; left: 50%;}
@@ -134,14 +134,14 @@ border-radius: 3rem 3rem 3rem 3rem; width: 60%; margin: 0 auto; background: rgba
 #slide3 h3{text-align: center; font-size: 30px; text-decoration: underline #888 solid; margin-bottom: 2rem;}
 #slide3 .contents{}
 #slide3 .skills{margin: 0 auto; display: inline-block; border-right: 3px solid #888; padding: 2rem; width: 50%; float: left;}
-#slide3 .tools{margin: 0 auto; display: inline-block; width: 50%; padding: 2rem; text-align: center;}
-#slide3 .tools ul{}
-#slide3 .tools ul li{float: left; padding: 1rem; text-align: center;}
+#slide3 .tools{margin: 0 auto; width: 50%; padding: 2rem; display: inline-block;}
+#slide3 .tools ul{text-align: center;}
+#slide3 .tools ul li{padding: 1rem; text-align: center; display: inline-block;}
 #slide3 .tools ul li img{width: 30px; height: 30px;}
 #slide3 .tools ul li span{display: block; text-align: center;}
 #slide3 .skill-name{margin: 0 1rem; font-weight: bold; text-align: center;}
 .skill-name img{width: 25px; height: 25px; margin-right: 1rem;}
-.skill-name i{font-size: 25px; margin-right: 1rem;}
+.skill-name i{font-size: 25px; margin: 0 auto;}
 i.fa-html5{color: orange;}
 i.fa-css3-alt{color: blue;}
 i.fa-sass{color: palevioletred;}
@@ -236,8 +236,8 @@ i.fa-react{color: skyblue;}
     text-transform: uppercase;
     font-weight: bold;
 }
-.content-btn .prev{top: 40%; left: 0}
-.content-btn .next{top: 40%; right: 0}
+.content-btn .prev{top: 40%; left: 5%}
+.content-btn .next{top: 40%; right: 5%}
 
 
 .selected-stories .container .stories-body{
@@ -307,10 +307,6 @@ i.fa-react{color: skyblue;}
     text-transform: uppercase;
     font-weight: bold;
 }
-.content-btn .prev{top: 40%; left: 0}
-.content-btn .next{top: 40%; right: 0}
-
-
 
 /* CONTACT: */
 
@@ -338,6 +334,6 @@ footer address{text-align: center;}
 .to-the-top a{display: block; width: 100%; height: 100%; text-align: center;}
 .to-the-top a i{font-size: 15px; position: absolute; top: 30%; left: 0; right: 0; bottom: 0;}
 /* KEYFRAMES: */
-@keyframes jumping {
+/* @keyframes jumping {
   
-}
+} */
