@@ -1,0 +1,264 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Danjo-bold-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Danjo-bold-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --swiper-theme-color:rgb(95, 95, 95);
+    
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Sunflower','Danjo-bold-Regular',sans-serif !important;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+/* 여백 초기화 */
+body,
+div,
+ul,
+li,
+dl,
+dd,
+dt,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+fieldset,
+legend,
+p,
+select,
+table,
+th,
+td,
+tr,
+textarea,
+button,
+form,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* a 링크 초기화 */
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+/* 폰트 초기화 */
+body,
+input,
+textarea,
+select,
+button,
+table {
+    color: #222;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* 폰트 스타일 초기화 */
+em,
+address {
+    font-style: normal;
+}
+
+/* 블릿기호 초기화 */
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+/* 제목 태그 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* 테두리 초기화 */
+img,
+fieldset {
+    border: 0 none;
+}
+
+/* 버튼 초기화 */
+button {
+    border: 0;
+}
+
+/* 반응형 */
+video {
+    width: 100%;
+}
+
+/* clearfix */
+.cf {
+    zoom: 1;
+}
+
+.cf:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+
+/* IR 효과 */
+.ir_pm {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+/* 의미있는 이미지의 대체 텍스트를 제공하는 경우(Phark Method) */
+.ir_wa {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+/* 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 때(WA IR) */
+.ir_so {
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+/* 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
+
+#skip {
+    z-index: 4;
+    position: relative;
+    width: 100%;
+    height: auto;
+    font-size: 0;
+}
+
+#skip>li {
+    width: 100%;
+    height: auto;
+    font-size: 0;
+}
+
+#skip>li>a {
+    display: block;
+    padding: 0;
+    font-size: 0;
+    text-align: center;
+    color: #fff;
+    background: #000;
+}
+
+#skip>li>a:focus {
+    padding: 20px;
+    font-size: 16px;
+}
+
+
+/* input style */
+input {
+    background-image: none;
+}
+
+input[type=button],
+input[type=reset],
+input[type=text],
+input[type=password],
+input[type=submit],
+input[type=search],
+input[type=tel],
+input[type=email] {
+    appearance: none;
+    border-radius: 0
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+    appearance: none
+}
+
+input:checked[type=checkbox] {
+    background-color: #666;
+    appearance: checkbox
+}
+
+.swiper {
+    width: 100%;
+    height: 100dvh;
+    height:100dvh;
+    background-color: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(300deg, #fff1eb, #ace0f9, #fed6e3); 
+    background-size: 180% 180%;
+    animation: gradient-animation 10s ease infinite;
+}
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mySwiper .swiper-slide>div:not(:nth-child(3)){width: 100%; height: 100%; padding: 64px 80px;}
+.swiper-slide>div #container{width: 100%; height: 100%; backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.125); background: rgba(255, 255, 255, 0.375);
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    border-radius: 28px;}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.swiper-pagination-bullets{left: 32px !important;}
+.swiper-pagination-fraction{font-weight: bold;
+    font-size: 44px;
+    right: 8px !important;
+    bottom: 40%;
+    width: 48px;
+    left: unset;}
