@@ -1,15 +1,12 @@
 import styled from "styled-components";
 import { Canvas, useLoader } from "@react-three/fiber";
-import {motion} from 'framer-motion';
-import {slideIn} from '../utils/motion';
 import { GLTFLoader } from "three-stdlib";
 import { Suspense } from "react";
 import { OrbitControls } from "@react-three/drei";
 import Button from '@mui/material/Button';
-import styles from "../assets/css/Home.module.css";
 export default function Home() {
   const Minerals = () => {
-    const gltf = useLoader(GLTFLoader, "public/blue_crystals/scene.gltf");
+    const gltf = useLoader(GLTFLoader, "/blue_crystals/scene.gltf");
     return (
       <><primitive
       dispose={null}
@@ -19,6 +16,7 @@ export default function Home() {
       
     );
   };
+  
   return (
     <HomeWrap id="wrap">
       <div className="left">
@@ -27,7 +25,6 @@ export default function Home() {
           <p>예비 프론트엔드 개발자</p>
           <p><span>최혜진</span>입니다.</p>
         </div>
-        <Button variant="contained">둘러보기</Button>
       </div>
         <Canvas
           shadows
@@ -78,4 +75,17 @@ const HomeWrap = styled.div`
         letter-spacing: 2px;}
   }
   canvas{transform: translate(15px,20%); cursor: grab;}
+  // 모바일
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    .left{
+      width: 100%;
+      padding-left: 20dvw;
+      position: absolute;
+      z-index: 1;
+      .titleBox{line-height: unset;
+      font-size: 24px;
+      margin-bottom: 5%; p{ span{    margin: unset;
+        font-size: 28px;}}}}
+  }
 `;

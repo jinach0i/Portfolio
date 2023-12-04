@@ -9,7 +9,6 @@ import { faFaceSmileBeam} from '@fortawesome/free-regular-svg-icons'
 import { faReact,faHtml5,faJs, faCss3Alt, faVuejs } from '@fortawesome/free-brands-svg-icons'
 
 library.add(fas,faReact,faHtml5,faJs,faCss3Alt,faXmark,faVuejs,faFaceSmileBeam,faDatabase)
-
 ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <App />

@@ -4,14 +4,24 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import styled from "@emotion/styled";
 import { useState } from "react";
-import ContentCutIcon from '@mui/icons-material/ContentCut';
-import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
-import PersonIcon from '@mui/icons-material/Person';
+import ContentCutIcon from "@mui/icons-material/ContentCut";
+import AutoFixHighIcon from "@mui/icons-material/AutoFixHigh";
+import PersonIcon from "@mui/icons-material/Person";
 import { Link } from "react-router-dom";
 export default function Projects() {
-    const [prjTitle, setPrjTitle] = useState(['국건보','SK케미칼','스타벅스','진후레쉬']);
-    const [imgSrcs, setImgSrcs] = useState(["src/assets/thumbnhis.png","src/assets/thumbskchemicals.png",'','']);
-    const [linkpaths, setLinkpaths] = useState(['','','',''])
+  const [prjTitle, setPrjTitle] = useState([
+    "국건보",
+    "SK케미칼",
+    "티켓1번가",
+    "스타벅스",
+  ]);
+  const [imgSrcs, setImgSrcs] = useState([
+    "img/nhis.png",
+    "img/skchemicals.png",
+    "img/ticketst1.png",
+    "",
+  ]);
+  const [linkpaths, setLinkpaths] = useState(["https://github.com/jinach0i/CC_NHIS.git", "https://github.com/jinach0i/CC-SKChemicals.git", "https://github.com/multicampus-team-project/project.git", ""]);
   return (
     <PrjWrap id="projectsWrap">
       <div className="left">
@@ -23,21 +33,28 @@ export default function Projects() {
           <div className="right">
             <div className="features">
               <div className="iconBox">
-                <div className="icon"><ContentCutIcon /></div>
+                <div className="icon">
+                  <ContentCutIcon />
+                </div>
                 <span>클론</span>
               </div>
               <div className="iconBox">
-                <div className="icon"><AutoFixHighIcon /></div>
+                <div className="icon">
+                  <AutoFixHighIcon />
+                </div>
                 <span>리뉴얼</span>
               </div>
               <div className="iconBox">
-                <div className="icon"><PersonIcon /></div>
+                <div className="icon">
+                  <PersonIcon />
+                </div>
                 <span>1인</span>
               </div>
             </div>
             <div className="subTxtBox">
               <p>
-              기본기를 다지기 위해 기존의 사이트를 참고하여 처음으로 만들어본 사이트입니다.
+                기본기를 다지기 위해 기존의 사이트를 참고하여 처음으로 만들어본
+                사이트입니다.
               </p>
             </div>
           </div>
@@ -54,31 +71,35 @@ export default function Projects() {
           }}
           modules={[Pagination]}
         >
-            {
-                prjTitle.map((a,i) => {
-                    return(
-                        <SwiperSlide key={i}><Prj prjTitle={prjTitle[i]} imgSrcs={imgSrcs[i]} linkpaths={linkpaths[i]} /></SwiperSlide>
-                    )
-                })
-            }
+          {prjTitle.map((a, i) => {
+            return (
+              <SwiperSlide key={i}>
+                <Prj
+                  prjTitle={prjTitle[i]}
+                  imgSrcs={imgSrcs[i]}
+                  linkpaths={linkpaths[i]}
+                />
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
     </PrjWrap>
   );
 }
 function Prj(props) {
-    return(
-        <div className="prjSlide">
-            <Link to={props.linkpaths}>
-              <div className="title">
-                  <h2>{props.prjTitle}</h2>
-              </div>
-              <div className="thumbs">
-                  <img src={props.imgSrcs} alt="" />
-              </div>
-            </Link>
+  return (
+    <div className="prjSlide">
+      <Link to={props.linkpaths}>
+        <div className="title">
+          <h2>{props.prjTitle}</h2>
         </div>
-    )
+        <div className="thumbs">
+          <img src={props.imgSrcs} alt="" />
+        </div>
+      </Link>
+    </div>
+  );
 }
 const PrjWrap = styled.div`
   display: flex;
@@ -181,4 +202,30 @@ const PrjWrap = styled.div`
       }
     }
   }
+  // 모바일
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    .left{
+      .bottom{
+        flex-direction: column;
+        .titleBox{
+          width: 100%; height: 100%; padding: 20px; margin: unset;
+          h2{
+            font-size: 48px;letter-spacing: normal; word-wrap: unset; line-height: unset;
+          }
+        } //titlebox end
+        .right{
+          .features{
+            width: 100%; height: auto; margin-bottom: 1%; justify-content: flex-start;
+          }
+          .subTxtBox{
+            width: 100%; height: auto;
+            p{letter-spacing: unset;
+              line-height: unset; padding: 16px;}
+          }
+        }
+      } //bottom end 
+      
+    }
+}
 `;

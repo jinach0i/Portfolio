@@ -1,4 +1,3 @@
-import styles from "../assets/css/Asidebar.module.css";
 import MailIcon from "@mui/icons-material/Mail";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import styled from "styled-components";

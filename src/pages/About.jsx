@@ -55,7 +55,7 @@ export default function About() {
           </div>
         </div>
         <div className="circleBg">
-          <img src="src\assets\Mask group.png" alt="" />
+          <img src="img/Mask group.png" alt="" />
         </div>
         <div className="charactersBox">
           <div className="bottomTxtBox">

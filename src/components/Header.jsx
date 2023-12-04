@@ -54,9 +54,9 @@ function DrawerAppBar(props) {
           <h1 style={{paddingTop:'16px'}}>
             <Link to="/">
               <img
-                src="src\assets\chj-high-resolution-logo-black-transparent.png"
+                src="img/chj-high-resolution-logo-black-transparent.png"
                 alt="로고"
-                style={{ height: "48px" }}
+                style={{ maxHeight: "48px" }}
               />
             </Link>
           </h1>
