@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [
     react()],
-    base:"/vite-deploy/",
+    base:"/Porfolio/",
   build: {
     chunkSizeWarningLimit: 1600,
     rollupOptions: {
