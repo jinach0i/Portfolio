@@ -1,5 +1,6 @@
 import MailIcon from "@mui/icons-material/Mail";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import Tooltip from "@mui/material/Tooltip";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 export default function Asidebar() {
@@ -7,22 +8,26 @@ export default function Asidebar() {
     <AsideWrap id="asideBar">
       <ul>
         <li>
-          <Link
-            className="email"
-            to="mailto:ch0iginn@gmail.com"
-            target="_blank"
-          >
-            <MailIcon />
-          </Link>
+          <Tooltip title="이메일 보내기" arrow>
+            <Link
+              className="email"
+              to="mailto:ch0iginn@gmail.com"
+              target="_blank"
+            >
+              <MailIcon />
+            </Link>
+          </Tooltip>
         </li>
         <li>
-          <Link
-            className="github"
-            to="https://github.com/jinach0i"
-            target="_blank"
-          >
-            <GitHubIcon />
-          </Link>
+          <Tooltip title="깃허브 둘러보기" arrow>
+            <Link
+              className="github"
+              to="https://github.com/jinach0i"
+              target="_blank"
+            >
+              <GitHubIcon />
+            </Link>
+          </Tooltip>
         </li>
       </ul>
     </AsideWrap>
