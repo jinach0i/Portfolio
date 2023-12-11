@@ -1,16 +1,16 @@
-import {Home,About,Projects,Contact} from './pages/Pages';
-import Header from './components/Header';
-import Asidebar from './components/Asidebar';
-import Cursor from './components/Cursor';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import './App.css'
+import { Home, About, Projects, Contact } from "./pages/Pages";
+import Header from "./components/Header";
+import Asidebar from "./components/Asidebar";
+import Cursor from "./components/Cursor";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "./App.css";
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/pagination";
 // import required modules
-import { Mousewheel, Pagination } from 'swiper/modules';
-import { useRef } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Mousewheel, Pagination, HashNavigation } from "swiper/modules";
+import { useRef } from "react";
+import { Route, Routes } from "react-router-dom";
 
 export default function App() {
   const swiperRef = useRef(null);
@@ -26,29 +26,40 @@ export default function App() {
       <Asidebar />
       <Swiper
         ref={swiperRef}
-        direction={'vertical'}
+        direction={"vertical"}
         slidesPerView={1}
         spaceBetween={30}
         mousewheel={true}
+        hashNavigation={{
+          watchState: true,
+        }}
         pagination={{
           clickable: true,
           dynamicBullets: true,
         }}
-        modules={[Mousewheel, Pagination]}
+        modules={[Mousewheel, Pagination, HashNavigation]}
         className="mySwiper"
       >
-        <SwiperSlide><Home /></SwiperSlide>
-        <SwiperSlide><About /></SwiperSlide>
-        <SwiperSlide><Projects /></SwiperSlide>
-        <SwiperSlide><Contact /></SwiperSlide>
+        <SwiperSlide data-hash="home">
+          <Home />
+        </SwiperSlide>
+        <SwiperSlide data-hash="about">
+          <About />
+        </SwiperSlide>
+        <SwiperSlide data-hash="projects">
+          <Projects />
+        </SwiperSlide>
+        <SwiperSlide data-hash="contact">
+          <Contact />
+        </SwiperSlide>
       </Swiper>
-      {/* <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/about' element={<About />}></Route>
-        <Route path='/projects' element={<Projects />}></Route>
-        <Route path='/contact' element={<Contact />}></Route>
-      </Routes> */}
-    <Asidebar />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/projects" element={<Projects />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+      </Routes>
+      <Asidebar />
     </>
   );
 }
