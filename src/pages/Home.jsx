@@ -4,10 +4,9 @@ import { Canvas, useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three-stdlib";
 import { Suspense } from "react";
 import { OrbitControls } from "@react-three/drei";
-import Button from "@mui/material/Button";
 export default function Home() {
   const Minerals = () => {
-    const gltf = useLoader(GLTFLoader, "public/blue_crystals/scene.gltf");
+    const gltf = useLoader(GLTFLoader, "blue_crystals/scene.gltf");
     return (
       <>
         <primitive dispose={null} object={gltf.scene} scale={2.5} />

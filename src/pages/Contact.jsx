@@ -9,7 +9,7 @@ import styled from "styled-components";
 
 export default function Contact() {
   const Earth = () => {
-    const gltf = useLoader(GLTFLoader, "public/planet/scene.gltf");
+    const gltf = useLoader(GLTFLoader, "planet/scene.gltf");
     return (
       <>
         <primitive

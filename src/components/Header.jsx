@@ -16,7 +16,7 @@ import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
 const drawerWidth = 360;
 const navItems = ["Entrance", "About", "Projects", "Contact"];
-const linkItems = ["#home", "#about", "#projects", "#contact"];
+const linkItems = ["entrance", "about", "projects", "contact"];
 function DrawerAppBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);

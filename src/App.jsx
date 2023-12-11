@@ -9,7 +9,7 @@ import "./App.css";
 import "swiper/css";
 import "swiper/css/pagination";
 // import required modules
-import { Mousewheel, Pagination, HashNavigation } from "swiper/modules";
+import { Mousewheel, Pagination, History } from "swiper/modules";
 import { useRef } from "react";
 import { Route, Routes } from "react-router-dom";
 
@@ -31,34 +31,34 @@ export default function App() {
         slidesPerView={1}
         spaceBetween={30}
         mousewheel={true}
-        hashNavigation={{
-          watchState: true,
+        history={{
+          key: "Portfolio/",
         }}
         pagination={{
           clickable: true,
           dynamicBullets: true,
         }}
-        modules={[Mousewheel, Pagination, HashNavigation]}
+        modules={[Mousewheel, Pagination, History]}
         className="mySwiper"
       >
-        <SwiperSlide data-hash="home">
+        <SwiperSlide data-history="entrance">
           <Home />
         </SwiperSlide>
-        <SwiperSlide data-hash="about">
+        <SwiperSlide data-history="about">
           <About />
         </SwiperSlide>
-        <SwiperSlide data-hash="projects">
+        <SwiperSlide data-history="projects">
           <Projects />
         </SwiperSlide>
-        <SwiperSlide data-hash="contact">
+        <SwiperSlide data-history="contact">
           <Contact />
         </SwiperSlide>
       </Swiper>
       <Routes>
-        <Route path="/Portfolio/" element={<Home />}></Route>
-        <Route path="/Portfolio/about" element={<About />}></Route>
-        <Route path="/Portfolio/projects" element={<Projects />}></Route>
-        <Route path="/Portfolio/contact" element={<Contact />}></Route>
+        <Route path="/entrance" index element={<Home />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/projects" element={<Projects />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
       </Routes>
       <Asidebar />
     </>
