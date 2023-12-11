@@ -1,3 +1,4 @@
+/* eslint-disable*/
 import { Home, About, Projects, Contact } from "./pages/Pages";
 import Header from "./components/Header";
 import Asidebar from "./components/Asidebar";
@@ -54,10 +55,10 @@ export default function App() {
         </SwiperSlide>
       </Swiper>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/projects" element={<Projects />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/Portfolio/" element={<Home />}></Route>
+        <Route path="/Portfolio/about" element={<About />}></Route>
+        <Route path="/Portfolio/projects" element={<Projects />}></Route>
+        <Route path="/Portfolio/contact" element={<Contact />}></Route>
       </Routes>
       <Asidebar />
     </>

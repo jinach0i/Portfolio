@@ -1,5 +1,5 @@
 import * as React from "react";
-import DragHandleIcon from '@mui/icons-material/DragHandle';
+import DragHandleIcon from "@mui/icons-material/DragHandle";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -10,12 +10,13 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
+import Button from "@mui/material/Button";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 const drawerWidth = 360;
-const navItems = ["Projects", "Contact"];
+const navItems = ["Entrance", "About", "Projects", "Contact"];
+const linkItems = ["#home", "#about", "#projects", "#contact"];
 function DrawerAppBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -28,9 +29,9 @@ function DrawerAppBar(props) {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}></Typography>
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
+        {navItems.map((item, i) => (
+          <ListItem key={i} disablePadding>
+            <ListItemButton href={linkItems[i]} sx={{ textAlign: "center" }}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -48,10 +49,16 @@ function DrawerAppBar(props) {
       <AppBar
         component="nav"
         position="fixed"
-        sx={{ backgroundColor: 'transparent',color:'black',boxShadow:'none'}}
+        sx={{
+          backgroundColor: "transparent",
+          color: "black",
+          boxShadow: "none",
+        }}
       >
-        <Toolbar sx={{justifyContent:'space-between',padding: '0 16px !important' }}>
-          <h1 style={{paddingTop:'16px'}}>
+        <Toolbar
+          sx={{ justifyContent: "space-between", padding: "0 16px !important" }}
+        >
+          <h1 style={{ paddingTop: "16px" }}>
             <Link to="/">
               <img
                 src="img/chj-high-resolution-logo-black-transparent.png"
