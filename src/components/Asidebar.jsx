@@ -1,42 +1,41 @@
 import MailIcon from "@mui/icons-material/Mail";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 export default function Asidebar() {
-  const handleChange=(e) => {}
-  const handleSubmit=(e) => {}
   return (
     <AsideWrap id="asideBar">
       <ul>
         <li>
-          <a className="email" href="#">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+          <Link
+            className="email"
+            to="mailto:ch0iginn@gmail.com"
+            target="_blank"
+          >
             <MailIcon />
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="github" href="#">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+          <Link
+            className="github"
+            to="https://github.com/jinach0i"
+            target="_blank"
+          >
             <GitHubIcon />
-          </a>
+          </Link>
         </li>
       </ul>
     </AsideWrap>
   );
 }
 const AsideWrap = styled.div`
-position: fixed;
-z-index: 1;
-right: 0;
-top: 0;
-height: 100%;
-display: flex;
-align-items: center;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
   ul {
     li {
       a {
